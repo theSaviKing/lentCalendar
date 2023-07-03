@@ -1,0 +1,26 @@
+{
+    "name": "lentCalendar",
+    "version": "1.0.0",
+    "description": "",
+    "main": "postcss.config.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.4.2",
+        "daisyui": "^2.4.0",
+        "postcss": "^8.4.7",
+        "tailwindcss": "^3.0.23"
+    },
+    "devDependencies": {
+        "tailwind-scrollbar": "^1.3.1"
+    },
+    "scripts": {
+        "buildcss": "tailwindcss -i ./static/css/input.css -o ./static/css/tailwind.css",
+        "buildcss-d": "tailwindcss -i ./static/css/input.css -o ./static/css/tailwind.css --minify",
+        "buildcss-w": "tailwindcss -i ./static/css/input.css -o ./static/css/tailwind.css --watch"
+    },
+    "keywords": [],
+    "author": "T. Paul Kariuki",
+    "license": "MIT"
+}

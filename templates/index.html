@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lent">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CMT Lent Calendar</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/tailwind.css')}}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='icons/apple-touch-icon.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='icons/favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='icons/favicon-16x16.png')}}">
+        <link rel="manifest" href="{{url_for('static', filename='icons/site.webmanifest')}}">
+    </head>
+    <body class="my-4 h-screen bg-base-100 text-base-content selection:bg-accent selection:text-accent-content">
+        <header class="text-center w-full h-screen flex flex-col justify-center items-center">
+            <h1 class="text-5xl font-serif lg:text-7xl">CMT Lent Calendar</h1>
+            <p id="tagline">a calendar of daily reflections for the Lenten season</p>
+            <p id="attribution">
+                made with 
+                <ion-icon name="heart"></ion-icon>
+                by Campus Ministry Team
+            </p>
+            <div id="wrapper" class="h-1/4">
+                <div id="wrapper-inner">
+                    <div id="scroll-down" class="before:bg-secondary">
+                        <span class="arrow-down after:border-t-secondary after:border-r-secondary">
+                            <!-- css generated icon -->
+                        </span>
+                        <span id="scroll-title" class="text-secondary uppercase font-bold">
+                            Scroll down
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex flex-col justify-center items-center h-screen">
+            <h2 class="text-3xl font-serif font-thin italic mb-10">Calendar</h2>
+            <div id="table" class="grid grid-cols-6 grid-rows-9 h-3/4 w-full px-2 lg:w-2/3 lg:py-10 lg:px-0">
+                <div id="th">*</div>
+                <div id="th">Day 1</div>
+                <div id="th">Day 2</div>
+                <div id="th">Day 3</div>
+                <div id="th">Day 4</div>
+                <div id="th">Day 5</div>
+                <div id="rh">Week of Ash Wednesday <span>February 28 &ndash; March 4</span></div>
+                <div id="td"></div>
+                <div id="td"></div>
+                <div id="td"></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=1, day=4)}}" class="btn btn-primary">
+                        Day 4
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=1, day=5)}}" class="btn btn-primary">
+                        Day 5
+                    </a>
+                </div>
+                <div id="rh">Week 1 <span>March 7 &ndash; March 11</span></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=2, day=1)}}" class="btn btn-primary">
+                        Day 1
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=2, day=2)}}" class="btn btn-primary">
+                        Day 2
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=2, day=3)}}" class="btn btn-primary">
+                        Day 3
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=2, day=4)}}" class="btn btn-primary">
+                        Day 4
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=2, day=5)}}" class="btn btn-primary">
+                        Day 5
+                    </a>
+                </div>
+                <div id="rh">Week 2 <span>March 14 &ndash; March 18</span></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=3, day=1)}}" class="btn btn-primary">
+                        Day 1
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=3, day=2)}}" class="btn btn-primary">
+                        Day 2
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=3, day=3)}}" class="btn btn-primary">
+                        Day 3
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=3, day=4)}}" class="btn btn-primary">
+                        Day 4
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=3, day=5)}}" class="btn btn-primary">
+                        Day 5
+                    </a>
+                </div>
+                <div id="rh">Week 3 <span>March 21 &ndash; March 25</span></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=4, day=1)}}" class="btn btn-primary">
+                        Day 1
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=4, day=2)}}" class="btn btn-primary">
+                        Day 2
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=4, day=3)}}" class="btn btn-primary">
+                        Day 3
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=4, day=4)}}" class="btn btn-primary">
+                        Day 4
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=4, day=5)}}" class="btn btn-primary">
+                        Day 5
+                    </a>
+                </div>
+                <div id="rh">Week 4 <span>March 28 &ndash; April 1</span><span class="font-bold uppercase italic" id="laetare">LAETARE SUNDAY</span></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=5, day=1)}}" class="btn btn-secondary">
+                        Day 1
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=5, day=2)}}" class="btn btn-secondary">
+                        Day 2
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=5, day=3)}}" class="btn btn-secondary">
+                        Day 3
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=5, day=4)}}" class="btn btn-secondary">
+                        Day 4
+                    </a>
+                </div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=5, day=5)}}" class="btn btn-secondary">
+                        Day 5
+                    </a>
+                </div>
+                <div id="rh">Week 5 <span>April 4 &ndash; April 8</span></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=6, day=1)}}" class="btn btn-primary">
+                        Day 1
+                    </a></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=6, day=2)}}" class="btn btn-primary">
+                        Day 2
+                    </a></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=6, day=3)}}" class="btn btn-primary">
+                        Day 3
+                    </a></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=6, day=4)}}" class="btn btn-primary">
+                        Day 4
+                    </a></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=6, day=5)}}" class="btn btn-primary">
+                        Day 5
+                    </a></div>
+                <div id="rh">Holy Week <span>April 11 &ndash; April 15</span></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=7, day=1)}}" class="btn btn-accent">
+                        Day 1
+                    </a></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=7, day=2)}}" class="btn btn-accent">
+                        Day 2
+                    </a></div>
+                <div id="td">
+                    <a href="{{url_for('get_reflection', week=7, day=3)}}" class="btn btn-accent">
+                        Day 3
+                    </a></div>
+                <div id="td" class="col-span-2">
+                    <a href="{{ url_for('easter') }}" class="btn btn-accent btn-outline text-2xl font-serif font-bold italic uppercase">Happy Easter!</a>
+                </div>
+                
+            </div>
+</div>
+        </main>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

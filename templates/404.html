@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lent">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page Not Found &mdash; CMT Lent Calendar</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/tailwind.css')}}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='icons/apple-touch-icon.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='icons/favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='icons/favicon-16x16.png')}}">
+        <link rel="manifest" href="{{url_for('static', filename='icons/site.webmanifest')}}">
+    </head>
+    <body class="my-4 h-screen bg-base-100 text-base-content selection:bg-accent selection:text-accent-content flex flex-col justify-center items-center text-center">
+        <h1 class="text-9xl">404</h1>
+        <p class="text-4xl italic font-serif font-bold">ERROR: NOT FOUND</p>
+        <p class="mt-10 text-lg">There is no content at the URL you have accessed.<br><br>If you clicked a link and were sent here, please <a href="mailto:webmaster@cmtlentcalendar.tk" target="_blank" class="underline hover:decoration-secondary transition-all font-bold duration-150">email us</a> with where you found the link and what you wanted to access so we can fix it. Thanks!</p>
+        <p class="mt-4 text-2xl">much love, Campus Ministry Team :)</p>
+        <div class="mt-10 flex gap-4">
+            <a href="{{url_for('index')}}" class="btn btn-primary">Calendar homepage</a>
+            <a href="{{refer}}" class="btn btn-secondary">Return to the page you came from</a>
+        </div>
+    </body>
+</html>
